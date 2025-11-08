@@ -1,0 +1,61 @@
+<?php
+
+namespace App\Models;
+
+use App\Enums\BlogStatusEnum;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Str;
+use Spatie\LaravelPackageTools\Concerns\Package\HasTranslations;
+
+class Blog extends Model
+{
+    /** @use HasFactory<\Database\Factories\BlogFactory> */
+    use HasFactory;
+    use HasTranslations;
+    use SoftDeletes;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var list<string>
+     */
+    protected $fillable = [
+        'title',
+        'description',
+        'image',
+        'status',
+    ];
+
+    public $translatable = ['title', 'description'];
+
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'title' => 'array',
+            'description' => 'array',
+            'status' => BlogStatusEnum::class,
+        ];
+    }
+
+    protected static function booted()
+    {
+        static::creating(function ($model) {
+            if (empty($model->slug) && !empty($model->title['en'])) {
+                $model->slug = Str::slug($model->title['en']);
+            }
+        });
+
+        static::updating(function ($model) {
+            if (empty($model->slug) && !empty($model->title['en'])) {
+                $model->slug = Str::slug($model->title['en']);
+            }
+        });
+    }
+}
