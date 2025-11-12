@@ -9,7 +9,7 @@ return [
     'contact_us' => 'Contact Us',
     'call_support' => 'Call Support: ',
     'language' => 'Language',
-    'welcome_message' => 'Welcome to Planet Herbs: Take advantage of our online services',
+    'welcome_message' => 'Welcome to Cairo Herbs: Take advantage of our online services',
 
 
     'product_code' => 'Product Code: ',
@@ -30,10 +30,10 @@ return [
     'results' => 'results',
 
 
-    'amazing_from_planetherbs' => 'AMAZING  FROM PLANETHERBS',
+    'amazing_from_cairoherbs' => 'AMAZING  FROM CAIROHERBS',
     'discover_now' => 'Discover Now',
-    'welcome_to_planet_herbs' => 'Welcome to Planet Herbs',
-    'planet_herbs_history' => 'PlanetHerbs History',
+    'welcome_to_cairo_herbs' => 'Welcome to Cairo Herbs',
+    'cairo_herbs_history' => 'CairoHerbs History',
     'featured_products' => 'Featured Products',
     'our_latest_posts' => 'Our Latest Posts',
     'continue_reading' => 'Continue Reading',

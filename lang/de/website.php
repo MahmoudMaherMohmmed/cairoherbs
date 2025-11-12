@@ -1,0 +1,52 @@
+<?php
+
+return [
+    'home' => 'Startseite',
+    'about' => 'Über uns',
+    'our_products' => 'Unsere Produkte',
+    'certifications' => 'Unsere Zertifizierungen',
+    'blog' => 'Blog',
+    'contact_us' => 'Kontaktieren Sie uns',
+    'call_support' => 'Support anrufen: ',
+    'language' => 'Sprache',
+    'welcome_message' => 'Willkommen bei Cairo Herbs: Nutzen Sie unsere Online-Dienste',
+
+    'product_code' => 'Produktcode: ',
+    'view_full_details' => 'Vollständige Details anzeigen',
+    'share_product' => 'Produkt teilen',
+    'related_products' => 'Ähnliche Produkte',
+
+    'quick_links' => 'Schnellzugriff',
+    'main_categories' => 'Hauptkategorien',
+    'contact_info' => 'Kontaktinformationen',
+    'address' => 'Adresse :',
+
+    'products' => 'Produkte',
+    'showing' => 'Angezeigt',
+    'of' => 'von',
+    'results' => 'Ergebnisse',
+
+    'amazing_from_cairoherbs' => 'ERSTAUNLICHES VON CAIROHERBS',
+    'discover_now' => 'Jetzt entdecken',
+    'welcome_to_cairo_herbs' => 'Willkommen bei Cairo Herbs',
+    'cairo_herbs_history' => 'Geschichte von CairoHerbs',
+    'featured_products' => 'Empfohlene Produkte',
+    'our_latest_posts' => 'Unsere neuesten Beiträge',
+    'continue_reading' => 'Weiterlesen',
+    'read_more' => 'Mehr erfahren',
+    'recent_posts' => 'Neueste Beiträge',
+    'product_categories' => 'Produktkategorien',
+    'top_products' => 'Top-Produkte',
+    'blog_details' => 'Blogdetails',
+    'share_this_post' => 'Diesen Beitrag teilen: ',
+
+    'tell_us_your_needs' => 'Teilen Sie uns Ihre Wünsche mit',
+    'name' => 'Name',
+    'name_required' => 'Ihr Name (erforderlich)',
+    'email' => 'E-Mail',
+    'email_required' => 'Ihre E-Mail (erforderlich)',
+    'subject' => 'Betreff',
+    'message' => 'Nachricht',
+    'message_required' => 'Ihre Nachricht (erforderlich)',
+    'send' => 'Senden',
+];

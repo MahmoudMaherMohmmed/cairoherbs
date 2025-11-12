@@ -35,8 +35,8 @@
                     <div class="col-lg-7 col-md-7">
                         <div class="welcome_lukani_content">
                             <div class="welcome_lukani_header">
-                                <h3>{{ __('website.welcome_to_planet_herbs') }}</h3>
-                                <h2>{{ __('website.planet_herbs_history') }}</h2>
+                                <h3>{{ __('website.welcome_to_cairo_herbs') }}</h3>
+                                <h2>{{ __('website.cairo_herbs_history') }}</h2>
                             </div>
                             <div class="welcome_lukani_desc">
                                 <p>{!! isset($website_setting) && $website_setting!=null ? getDefaultValueKey($website_setting->description) : '' !!}</p>
