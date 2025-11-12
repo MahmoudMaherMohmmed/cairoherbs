@@ -40,4 +40,12 @@ class Slider extends Model
             'status' => SliderStatusEnum::class,
         ];
     }
+
+    /**
+     * Apply the scope to a given Eloquent query builder.
+     */
+    public function scopeActive($query)
+    {
+        return $query->where('status', SliderStatusEnum::ACTIVE->value);
+    }
 }

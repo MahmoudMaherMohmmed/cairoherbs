@@ -58,4 +58,12 @@ class Blog extends Model
             }
         });
     }
+
+    /**
+     * Apply the scope to a given Eloquent query builder.
+     */
+    public function scopeActive($query)
+    {
+        return $query->where('status', BlogStatusEnum::ACTIVE->value);
+    }
 }

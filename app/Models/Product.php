@@ -69,4 +69,20 @@ class Product extends Model
     {
         return $this->belongsTo(Category::class)->withTrashed();
     }
+
+    /**
+     * Apply the scope to a given Eloquent query builder.
+     */
+    public function scopeActive($query)
+    {
+        return $query->where('status', ProductStatusEnum::ACTIVE->value);
+    }
+
+    /**
+     * Apply the scope to a given Eloquent query builder.
+     */
+    public function scopeFeatured($query)
+    {
+        return $query->where('featured', ProductFeaturedEnum::YES->value);
+    }
 }

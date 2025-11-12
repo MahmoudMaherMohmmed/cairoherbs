@@ -52,4 +52,12 @@ class User extends Authenticatable
             'status' => UserStatusEnum::class,
         ];
     }
+
+    /**
+     * Apply the scope to a given Eloquent query builder.
+     */
+    public function scopeActive($query)
+    {
+        return $query->where('status', UserStatusEnum::ACTIVE->value);
+    }
 }

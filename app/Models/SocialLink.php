@@ -38,4 +38,12 @@ class SocialLink extends Model
             'status' => SocialLinkStatusEnum::class,
         ];
     }
+
+    /**
+     * Apply the scope to a given Eloquent query builder.
+     */
+    public function scopeActive($query)
+    {
+        return $query->where('status', SocialLinkStatusEnum::ACTIVE->value);
+    }
 }

@@ -40,4 +40,12 @@ class Service extends Model
             'status' => ServiceStatusEnum::class,
         ];
     }
+
+    /**
+     * Apply the scope to a given Eloquent query builder.
+     */
+    public function scopeActive($query)
+    {
+        return $query->where('status', ServiceStatusEnum::ACTIVE->value);
+    }
 }

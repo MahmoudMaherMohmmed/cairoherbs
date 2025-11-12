@@ -42,4 +42,12 @@ class Certificate extends Model
             'status' => CertificateStatusEnum::class,
         ];
     }
+
+    /**
+     * Apply the scope to a given Eloquent query builder.
+     */
+    public function scopeActive($query)
+    {
+        return $query->where('status', CertificateStatusEnum::ACTIVE->value);
+    }
 }
