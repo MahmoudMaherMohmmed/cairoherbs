@@ -47,7 +47,7 @@ class HomeController extends Controller
 
     public function product($slug)
     {
-        $product = Product::where('slug', $slug)->active()->first();
+        $product = Product::where('slug', $slug)->active()->firstOrFail();
         $related_products = $product->category->products;
 
         return view('front.product_details', compact('product', 'related_products'));
