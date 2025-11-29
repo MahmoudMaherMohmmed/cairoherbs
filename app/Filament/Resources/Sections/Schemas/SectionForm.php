@@ -25,6 +25,7 @@ class SectionForm
                         ->columnSpanFull()
                 ])->columnSpanFull(),
                 FileUpload::make('image')
+                    ->directory('sections')
                     ->image()
                     ->required()
                     ->columnSpanFull(),

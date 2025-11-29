@@ -25,6 +25,7 @@ class SliderForm
                         ->columnSpanFull()
                 ])->columnSpanFull(),
                 FileUpload::make('image')
+                    ->directory('sliders')
                     ->image()
                     ->required()
                     ->columnSpanFull(),

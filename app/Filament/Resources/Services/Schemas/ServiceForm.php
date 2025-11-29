@@ -25,6 +25,7 @@ class ServiceForm
                         ->columnSpanFull()
                 ])->columnSpanFull(),
                 FileUpload::make('image')
+                    ->directory('services')
                     ->image()
                     ->required()
                     ->columnSpanFull(),

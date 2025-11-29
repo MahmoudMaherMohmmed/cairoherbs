@@ -45,6 +45,7 @@ class WebsiteSettingForm
                     ->suffixIcon(Heroicon::Phone)
                     ->default(null),
                 FileUpload::make('image')
+                    ->directory('website_settings')
                     ->image()
                     ->required()
                     ->columnSpanFull(),

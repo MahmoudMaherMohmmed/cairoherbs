@@ -25,6 +25,7 @@ class BlogForm
                         ->columnSpanFull()
                 ])->columnSpanFull(),
                 FileUpload::make('image')
+                    ->directory('blogs')
                     ->image()
                     ->required()
                     ->columnSpanFull(),

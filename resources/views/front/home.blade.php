@@ -18,7 +18,7 @@
             <div class="slider_area owl-carousel">
                 @foreach($sliders as $slider)
                     <div class="single_slider d-flex align-items-center"
-                         data-bgimg="{{asset('files/'.$slider->image)}}">
+                         data-bgimg="{{Storage::url($slider->image)}}">
                         <div class="container">
                             <div class="row">
                                 <div class="col-12">

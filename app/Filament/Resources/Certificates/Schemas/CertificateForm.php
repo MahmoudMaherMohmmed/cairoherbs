@@ -25,6 +25,7 @@ class CertificateForm
                         ->columnSpanFull()
                 ])->columnSpanFull(),
                 FileUpload::make('image')
+                    ->directory('certificates')
                     ->image()
                     ->required()
                     ->columnSpanFull(),

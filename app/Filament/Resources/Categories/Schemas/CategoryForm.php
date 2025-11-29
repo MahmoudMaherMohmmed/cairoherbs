@@ -25,6 +25,7 @@ class CategoryForm
                         ->columnSpanFull()
                 ])->columnSpanFull(),
                 FileUpload::make('image')
+                    ->directory('categories')
                     ->image()
                     ->default(null)
                     ->columnSpanFull(),
