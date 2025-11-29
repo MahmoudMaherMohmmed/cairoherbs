@@ -364,8 +364,7 @@
                                     <h2 id="product_title"></h2>
                                 </div>
                                 <div class="modal_price mb-10">
-                                    {{ __('website.product_code') }} <span class="new_price"
-                                                                           id="product_code"> </span>
+                                    {{ __('website.product_code') }} <span class="new_price" id="product_code"> </span>
                                 </div>
                                 <div class="modal_description mb-15">
                                     <p id="product_description"></p>
@@ -450,13 +449,6 @@
 
     //--------------------------------- Loading Modal Data ----------------------------
     function modalData(id, code, title, description, image_url, product_url) {
-        console.log('id:', id);
-        console.log('code:', code);
-        console.log('title:', title);
-        console.log('description:', description);
-        console.log('image_url:', image_url);
-        console.log('product_url:', product_url);
-
         $("#product_code").html(code);
         $("#product_title").html(title);
         $("#product_description").html(description);

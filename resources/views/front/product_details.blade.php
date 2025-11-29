@@ -159,7 +159,7 @@
                                                         <a href="#" data-toggle="modal"
                                                            data-target="#modal_box"
                                                            title="quick view"
-                                                           onclick="modalData('{{$related_product->id}}', '{{$related_product->code}}', '{{getDefaultValueKey($related_product->title)}}', '{{getDefaultValueKey($related_product->description)}}', '{{asset("files/".$related_product->image)}}', '{{route('product',[$product->slug])}}')">
+                                                           onclick="modalData('{{$related_product->id}}', '{{$related_product->code}}', '{{getDefaultValueKey($related_product->title)}}', '{{getDefaultValueKey($related_product->description)}}', '{{Storage::url($related_product->image)}}', '{{route('product',[$product->slug])}}')">
                                                             <i class="icon-eye"></i>
                                                         </a>
                                                     </li>
