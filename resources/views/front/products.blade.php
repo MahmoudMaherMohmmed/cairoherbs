@@ -157,7 +157,7 @@
                                                             href="{{route('product',[$product->slug])}}">{{getDefaultValueKey($product->title)}}</a>
                                                 </h4>
                                                 <div class="product_desc">
-                                                    <p>{!! getShortDescription($product->description) !!}</p>
+                                                    <p>{{ getDefaultValueKey($product->description) }}</p>
                                                 </div>
                                             </div>
                                         </figure>
