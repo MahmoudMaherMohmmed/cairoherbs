@@ -1,6 +1,8 @@
 @extends('front.layouts.app')
 
-@section('title') Certifications @endsection
+@section('title')
+    Certifications
+@endsection
 
 @section('style')
     <link href="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css" rel="stylesheet">
@@ -157,18 +159,18 @@
     <!--breadcrumbs area end-->
 
     <div class="container" style="margin-top: 100px;">
-        @if(isset($certifications) && $certifications!=null && count($certifications)>0)
+        @if($certifications->isNotEmpty())
             <div class="demo-gallery">
                 <ul id="lightgallery" class="list-unstyled row">
                     @foreach($certifications as $certificate)
                         <li class="col-lg-3 col-md-3 col-xs-6 col-sm-6"
-                            data-responsive="{{url('files/',$certificate->image)}}"
-                            data-src="{{url('files/',$certificate->image)}}"
+                            data-responsive="{{Storage::url($certificate->image)}}"
+                            data-src="{{Storage::url($certificate->image)}}"
                             data-sub-html="<h4>{{getDefaultValueKey($certificate->title)}}</h4>"
                             data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
                             <a href="">
                                 <img class="img-responsive"
-                                     src="{{url('files/',$certificate->image)}}"
+                                     src="{{Storage::url($certificate->image)}}"
                                      alt="{{getDefaultValueKey($certificate->title)}}">
                             </a>
                         </li>
