@@ -14,9 +14,9 @@
     position: relative;
     left: 50%;
     top: 50%;
-    width: 250px;
-    height: 250px;
-    margin: -275px 0 0 -125px;
+    width: 150px;
+    height: 150px;
+    margin: -230px 0 0 -75px;
 }
 
 .loader {
