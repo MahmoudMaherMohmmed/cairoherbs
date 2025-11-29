@@ -13,7 +13,7 @@
 @endsection
 
 @section('content')
-    @if(isset($sliders) && $sliders!=null)
+    @if($sliders->isNotEmpty())
         <section class="slider_section slider_s_two">
             <div class="slider_area owl-carousel">
                 @foreach($sliders as $slider)
@@ -25,7 +25,7 @@
                                     <div class="slider_content">
                                         <span>{{ __('website.amazing_from_cairoherbs') }}</span>
                                         <h1>{{getDefaultValueKey($slider->title)}}</h1>
-                                        <p>{{getDefaultValueKey($slider->subtitle)}} </p>
+                                        <p>{{getDefaultValueKey($slider->description)}} </p>
                                         <a class="button"
                                            href="{{route('products')}}">{{ __('website.discover_now') }}</a>
                                     </div>
@@ -54,7 +54,7 @@
                                 <h2>{{ __('website.cairo_herbs_history') }}</h2>
                             </div>
                             <div class="welcome_lukani_desc">
-                                <p>{!! isset($website_setting) && $website_setting!=null ? getDefaultValueKey($website_setting->description) : '' !!}</p>
+                                <p>{!! getDefaultValueKey($website_setting->description) !!}</p>
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
         </div>
     </div>
 
-    @if(isset($services) && $services!=null)
+    @if($services->isNotEmpty())
         <div class="choseus_area" data-bgimg="{{asset('front')}}/img/about/about-us-policy-bg.jpg">
             <div class="container">
                 <div class="row">
@@ -87,7 +87,7 @@
         </div>
     @endif
 
-    @if(isset($products) && $products!=null)
+    @if($products->isNotEmpty())
         <div class="product_area product_style2">
             <div class="container-fluid">
                 <div class="row">
@@ -117,7 +117,7 @@
                                                                     <a href="#" data-toggle="modal"
                                                                        data-target="#modal_box"
                                                                        title="quick view"
-                                                                       onclick="modalData('{{$product->id}}', '{{$product->code}}', '{{getDefaultValueKey($product->title)}}', '{{getShortDescription($product->description)}}', '{{asset("files/".$product->image)}}', '{{route('product',[$product->slug])}}')">
+                                                                       onclick="modalData('{{$product->id}}', '{{$product->code}}', '{{getDefaultValueKey($product->title)}}', '{{getDefaultValueKey($product->description)}}', '{{asset("files/".$product->image)}}', '{{route('product',[$product->slug])}}')">
                                                                         <i class="icon-eye"></i></a>
                                                                 </li>
                                                             </ul>
@@ -167,7 +167,7 @@
         </div>
     @endif
 
-    @if(isset($blogs) && $blogs!=null)
+    @if($blogs->isNotEmpty())
         <section class="blog_section blog_s_three">
             <div class="container">
                 <div class="row">

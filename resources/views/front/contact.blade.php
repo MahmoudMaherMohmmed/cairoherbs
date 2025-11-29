@@ -89,7 +89,7 @@
 
     <!--contact map start-->
     <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23481.840705729177!2d30.924476288130137!3d28.969690040751555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145a333f29bf90b5%3A0x3542b5427dc074c!2z2LXZgdi3INix2KfYtNmK2YbYjCDYqNio2KfYjCDZhdit2KfZgdi42Kkg2KjZhtmKINiz2YjZitmB!5e0!3m2!1sar!2seg!4v1610465738857!5m2!1sar!2seg"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d16604.953228624305!2d30.912638308153376!3d28.964800324359814!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145a334fb82b21b7%3A0x605dbd9b86a2bb84!2z2YXZhti02KfYqSDYo9io2Ygg2YXZhNmK2K3YjCDYqNiv2YfZhNiMINmF2LHZg9iyINiz2YXYs9i32KfYjCDZhdit2KfZgdi42Kkg2KjZhtmKINiz2YjZitmB!5e0!3m2!1sar!2seg!4v1764414614739!5m2!1sar!2seg"
         width="100%" height="460" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
         tabindex="0"></iframe>
     <!--contact map end-->
