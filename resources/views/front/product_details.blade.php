@@ -1,6 +1,8 @@
 @extends('front.layouts.app')
 
-@section('title') {{isset($product)&&$product!=null ? getLangValue($product->title, 'en') : ''}} @endsection
+@section('title')
+    {{isset($product)&&$product!=null ? getLangValue($product->title, 'en') : ''}}
+@endsection
 
 @section('style')
     <style>
@@ -38,8 +40,8 @@
                         <div class="product-details-tab">
                             <div id="img-1" class="zoomWrapper single-zoom">
                                 <a href="javascript:void(0);">
-                                    <img id="zoom1" src="{{asset('files/'.$product->image)}}"
-                                         data-zoom-image="{{asset('files/'.$product->image)}}"
+                                    <img id="zoom1" src="{{Storage::url($product->image)}}"
+                                         data-zoom-image="{{Storage::url($product->image)}}"
                                          alt="{{getDefaultValueKey($product->title)}}"
                                          style="min-height: 500px; width: 100%;">
                                 </a>
@@ -61,7 +63,8 @@
                                     </ul>
                                 </div>
                                 <div class="price_box">
-                                    <b>{{ __('website.product_code') }}</b> <span class="current_price">{{$product->code}}</span>
+                                    <b>{{ __('website.product_code') }}</b> <span
+                                        class="current_price">{{$product->code}}</span>
                                 </div>
                                 <div class="product_desc">
                                     <p>{!! getDefaultValueKey($product->description)!!}</p>
@@ -77,7 +80,7 @@
                                             save</a>
                                     </li>
                                     <li><a class="google-plus" href="#" title="google +"><i
-                                                    class="fa fa-google-plus"></i>
+                                                class="fa fa-google-plus"></i>
                                             share</a></li>
                                     <li><a class="linkedin" href="#" title="linkedin"><i class="fa fa-linkedin"></i>
                                             linked</a>
@@ -146,7 +149,7 @@
                                     <figure>
                                         <div class="product_thumb">
                                             <a class="primary_img" href="{{route('product',[$related_product->slug])}}">
-                                                <img src="{{asset('files/'.$related_product->image)}}"
+                                                <img src="{{Storage::url($related_product->image)}}"
                                                      alt="{{getDefaultValueKey($related_product->title)}}"
                                                      style="height: 185px;">
                                             </a>

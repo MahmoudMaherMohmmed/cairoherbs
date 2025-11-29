@@ -71,7 +71,7 @@
                         <div class="col-lg-4 col-md-4">
                             <div class="single_chose">
                                 <div class="chose_icone">
-                                    <img src="{{asset('files/'.$service->image)}}"
+                                    <img src="{{Storage::url($service->image)}}"
                                          alt="{{getDefaultValueKey($service->title)}}">
                                 </div>
                                 <div class="chose_content">
@@ -108,7 +108,7 @@
                                                 <figure>
                                                     <div class="product_thumb">
                                                         <a class="primary_img" href="javascript:void(0);"><img
-                                                                src="{{asset('files/'.$product->image)}}"
+                                                                src="{{Storage::url($product->image)}}"
                                                                 alt="{{getDefaultValueKey($product->title)}}">
                                                         </a>
                                                         <div class="action_links">
@@ -185,7 +185,7 @@
                                     <figure>
                                         <div class="blog_thumb">
                                             <a href="{{route('blog_details',[$blog->slug])}}">
-                                                <img src="{{asset('files/'.$blog->image)}}"
+                                                <img src="{{Storage::url($blog->image)}}"
                                                      alt="{{getDefaultValueKey($blog->title)}}"
                                                      style="height: 250px;">
                                             </a>

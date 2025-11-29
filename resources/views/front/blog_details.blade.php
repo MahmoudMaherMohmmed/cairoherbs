@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="blog_thumb">
                                     <a href="javascript:void(0);">
-                                        <img src="{{asset('files/'.$blog->image)}}"
+                                        <img src="{{Storage::url($blog->image)}}"
                                              alt="{{getDefaultValueKey($blog->title)}}"
                                              style="width: 100%;">
                                     </a>
@@ -90,7 +90,7 @@
                                     <div class="post_wrapper">
                                         <div class="post_thumb">
                                             <a href="{{route('blog_details',[$recent->slug])}}">
-                                                <img src="{{asset('files/'.$recent->image)}}"
+                                                <img src="{{Storage::url($recent->image)}}"
                                                      alt="{{getDefaultValueKey($recent->title)}}">
                                             </a>
                                         </div>

@@ -89,7 +89,7 @@
                                         <figure>
                                             <div class="product_thumb">
                                                 <a class="primary_img" href="javascript:void(0);">
-                                                    <img src="{{asset('files/'.$product->image)}}"
+                                                    <img src="{{Storage::url($product->image)}}"
                                                          alt="{{getDefaultValueKey($product->title)}}">
                                                 </a>
                                                 <div class="action_links">

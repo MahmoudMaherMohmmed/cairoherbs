@@ -1,6 +1,8 @@
 @extends('front.layouts.app')
 
-@section('title') About US @endsection
+@section('title')
+    About US
+@endsection
 
 @section('style') @endsection
 
@@ -56,7 +58,7 @@
                         <div class="col-lg-4 col-md-4">
                             <div class="single_chose">
                                 <div class="chose_icone">
-                                    <img src="{{asset('files/'.$service->image)}}"
+                                    <img src="{{Storage::url($service->image)}}"
                                          alt="{{getDefaultValueKey($service->title)}}">
                                 </div>
                                 <div class="chose_content">
@@ -80,7 +82,7 @@
                             <article class="single_gallery_section">
                                 <figure>
                                     <div class="gallery_thumb">
-                                        <img src="{{asset('files/'.$vision->image)}}"
+                                        <img src="{{Storage::url($vision->image)}}"
                                              alt="{{getDefaultValueKey($vision->title)}}" style="height: 235px;">
                                     </div>
                                     <figcaption class="about_gallery_content">
@@ -96,7 +98,7 @@
                             <article class="single_gallery_section">
                                 <figure>
                                     <div class="gallery_thumb">
-                                        <img src="{{asset('files/'.$mission->image)}}"
+                                        <img src="{{Storage::url($mission->image)}}"
                                              alt="{{getDefaultValueKey($mission->title)}}" style="height: 235px;">
                                     </div>
                                     <figcaption class="about_gallery_content">
@@ -112,7 +114,7 @@
                             <article class="single_gallery_section">
                                 <figure>
                                     <div class="gallery_thumb">
-                                        <img src="{{asset('files/'.$strategy->image)}}"
+                                        <img src="{{Storage::url($strategy->image)}}"
                                              alt="{{getDefaultValueKey($strategy->title)}}" style="height: 235px;">
                                     </div>
                                     <figcaption class="about_gallery_content">

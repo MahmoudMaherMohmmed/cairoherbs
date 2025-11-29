@@ -164,7 +164,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-2 col-md-3 col-4">
                         <div class="logo">
-                            <a href="{{route('home')}}"><img src="{{asset('files/'.$website_setting->image)}}"
+                            <a href="{{route('home')}}"><img src="{{Storage::url($website_setting->image)}}"
                                                              alt="{{getDefaultValueKey($website_setting->title)}}"></a>
                         </div>
                     </div>
@@ -238,7 +238,7 @@
                 <div class="col-lg-5 col-md-5">
                     <div class="widgets_container widget_app">
                         <div class="footer_logo">
-                            <a href="{{route('home')}}"><img src="{{asset('files/'.$website_setting->image)}}"
+                            <a href="{{route('home')}}"><img src="{{Storage::url($website_setting->image)}}"
                                                              alt="{{getDefaultValueKey($website_setting->title)}}"></a>
                         </div>
                         <div>
@@ -325,7 +325,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-12 col-md-12">
                     <div class="copyright_area text-center">
-                        <p>Copyright &copy; {{now()->format('Y')}} <a href="javascript:void(0);">Planet Herbs</a> All Right Reserved.</p>
+                        <p>Copyright &copy; {{now()->format('Y')}} <a href="javascript:void(0);">Cairo Herbs</a> All
+                            Right Reserved.</p>
                     </div>
                 </div>
             </div>
@@ -364,7 +365,7 @@
                                 </div>
                                 <div class="modal_price mb-10">
                                     {{ __('website.product_code') }} <span class="new_price"
-                                                                                    id="product_code"> </span>
+                                                                           id="product_code"> </span>
                                 </div>
                                 <div class="modal_description mb-15">
                                     <p id="product_description"></p>
