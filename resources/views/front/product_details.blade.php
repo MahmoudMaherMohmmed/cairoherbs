@@ -95,41 +95,6 @@
     </div>
     <!--product details end-->
 
-    <!--product info start-->
-    <div class="product_d_info mb-90">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="product_d_inner">
-                        <div class="reviews_wrapper">
-                            <div class="product_review_form">
-                                <form action="#">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <label for="review_comment">{{ __('website.message') }}</label>
-                                            <textarea name="comment" id="review_comment"></textarea>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6">
-                                            <label for="author">{{ __('website.name') }}</label>
-                                            <input id="author" type="text">
-
-                                        </div>
-                                        <div class="col-lg-6 col-md-6">
-                                            <label for="email">{{ __('website.email') }}</label>
-                                            <input id="email" type="text">
-                                        </div>
-                                    </div>
-                                    <button type="submit">{{ __('website.send') }}</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--product info end-->
-
     @if($related_products->isNotEmpty())
         <section class="product_area related_products">
             <div class="container">
