@@ -53,4 +53,5 @@ return [
     'message' => 'Message',
     'message_required' => 'Your Message (required)',
     'send' => 'Send',
+    'message_sent_successfully' => 'Message sent successfully.',
 ];

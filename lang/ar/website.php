@@ -54,4 +54,5 @@ return [
     'message' => 'الرسالة',
     'message_required' => 'أدخل رسالتك (مطلوب)',
     'send' => 'إرسال',
+    'message_sent_successfully' => 'تم إرسال رسالتك بنجاح.',
 ];

@@ -8811,7 +8811,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     border: 1px solid #e1e1e1;
     background: #ffffff;
     resize: none;
-    margin-bottom: 20px;
     width: 100%;
     padding: 10px 20px;
     color: #222222;

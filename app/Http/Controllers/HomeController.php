@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ContactRequest;
 use App\Models\Blog;
 use App\Models\Category;
 use App\Models\Certificate;
+use App\Models\Contact;
 use App\Models\Product;
 use App\Models\Section;
 use App\Models\Service;
@@ -81,5 +83,12 @@ class HomeController extends Controller
     public function contact_us()
     {
         return view('front.contact');
+    }
+
+    public function contactPost(ContactRequest $request)
+    {
+        Contact::create($request->validated());
+
+        return redirect()->route('contact_us')->with('success', trans('website.message_sent_successfully'));
     }
 }

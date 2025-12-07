@@ -49,4 +49,5 @@ return [
     'message' => 'Nachricht',
     'message_required' => 'Ihre Nachricht (erforderlich)',
     'send' => 'Senden',
+    'message_sent_successfully' => 'Bericht succesvol verzonden.',
 ];

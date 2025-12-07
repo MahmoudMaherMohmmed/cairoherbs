@@ -9,6 +9,20 @@
         [type=email], [type=number], [type=tel], [type=url] {
             direction: unset;
         }
+
+        .has-error input {
+            border-color: #a94442;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        }
+
+        .has-error label {
+            color: #a94442;
+        }
+
+        .help-block {
+            color: #a94442;
+            font-size: 12px;
+        }
     </style>
 @endsection
 
@@ -56,25 +70,48 @@
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="contact_message form">
+                        @include('front.layouts.partials.messages')
+
                         <h3>{{ __('website.tell_us_your_needs') }}</h3>
-                        <form id="contact-form" method="POST"
-                              action="https://demo.hasthemes.com/lukani-preview-v1/lukani/assets/mail.php">
-                            <p>
+                        <form method="POST" action="{{route('contact_post')}}">
+                            @csrf
+
+                            <p class="{{$errors->has('name') ? 'has-error' : ''}}">
                                 <label>{{ __('website.name_required') }}</label>
                                 <input name="name" placeholder="{{ __('website.name') }} *" type="text">
+                                @if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
                             </p>
-                            <p>
+                            <p class="{{$errors->has('email') ? 'has-error' : ''}}">
                                 <label>{{ __('website.email_required') }}</label>
                                 <input name="email" placeholder="{{ __('website.email') }} *" type="email">
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
                             </p>
-                            <p>
+                            <p class="{{$errors->has('subject') ? 'has-error' : ''}}">
                                 <label>{{ __('website.subject') }}</label>
                                 <input name="subject" placeholder="{{ __('website.subject') }} *" type="text">
+                                @if ($errors->has('subject'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('subject') }}</strong>
+                                    </span>
+                                @endif
                             </p>
-                            <div class="contact_textarea">
+                            <div class="{{$errors->has('message') ? 'has-error' : ''}}" style="margin-bottom: 20px;">
                                 <label>{{ __('website.message_required') }}</label>
                                 <textarea placeholder="{{ __('website.message') }} *" name="message"
                                           class="form-control2"></textarea>
+                                @if ($errors->has('message'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('message') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                             <button type="submit">{{ __('website.send') }}</button>
                             <p class="form-messege"></p>

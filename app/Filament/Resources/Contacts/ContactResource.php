@@ -101,11 +101,12 @@ class ContactResource extends Resource
                     ->searchable(),
                 TextColumn::make('subject')
                     ->label('Subject')
-                    ->searchable(),
+                    ->searchable()
+                    ->words(5),
                 TextColumn::make('message')
                     ->label('Message')
                     ->searchable()
-                    ->limit(50),
+                    ->limit(40),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
