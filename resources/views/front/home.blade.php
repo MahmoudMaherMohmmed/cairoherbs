@@ -23,7 +23,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="slider_content">
-                                        <span>{{ __('website.amazing_from_cairoherbs') }}</span>
+                                        {{--<span>{{ __('website.amazing_from_cairoherbs') }}</span>--}}
                                         <h1>{{getDefaultValueKey($slider->title)}}</h1>
                                         <p>{{getDefaultValueKey($slider->description)}} </p>
                                         <a class="button"
