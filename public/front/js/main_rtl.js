@@ -33,9 +33,9 @@
         rtl:true,
         animateOut: 'fadeOut',
         loop: true,
-        nav: true,
+        nav: false,
         autoplay: true,
-        autoplayTimeout: 5000,
+        autoplayTimeout: 6000,
         items: 1,
         dots:true,
     });
