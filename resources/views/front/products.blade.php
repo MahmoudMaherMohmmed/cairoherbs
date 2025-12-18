@@ -1,6 +1,8 @@
 @extends('front.layouts.app')
 
-@section('title') {{getDefaultValueKey($category->title)}} @endsection
+@section('title')
+    {{$category ? getDefaultValueKey($category->title) : ''}} {{__('website.products')}}
+@endsection
 
 @section('style')
     <style>
@@ -154,7 +156,7 @@
                                                     </ul>
                                                 </div>
                                                 <h4 class="product_name"><a
-                                                            href="{{route('product',[$product->slug])}}">{{getDefaultValueKey($product->title)}}</a>
+                                                        href="{{route('product',[$product->slug])}}">{{getDefaultValueKey($product->title)}}</a>
                                                 </h4>
                                                 <div class="product_desc">
                                                     <p>{{ getDefaultValueKey($product->description) }}</p>
