@@ -35,10 +35,9 @@
         loop: true,
         nav: true,
         autoplay: true,
-        autoplayTimeout: 8000,
+        autoplayTimeout: 5000,
         items: 1,
         dots:true,
-        navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
     });
 
     /*---product column4 activation---*/
