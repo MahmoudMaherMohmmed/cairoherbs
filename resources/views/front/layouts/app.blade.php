@@ -61,7 +61,7 @@
 <!----- Start Section Loading ----->
 <section class="loading-overlay">
     <div class="loader"></div>
-    <img src="{{asset('front')}}/img/logo.png"/>
+{{--    <img src="{{asset('front')}}/img/logo.png"/>--}}
 </section>
 <!----- End Section Loading ----->
 
