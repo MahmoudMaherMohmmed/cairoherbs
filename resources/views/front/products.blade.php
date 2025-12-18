@@ -1,6 +1,6 @@
 @extends('front.layouts.app')
 
-@section('title') Our {{isset($category)&&$category!=null ? getLangValue($category->title, 'en') : ''}} Products @endsection
+@section('title') {{getDefaultValueKey($category->title)}} @endsection
 
 @section('style')
     <style>
