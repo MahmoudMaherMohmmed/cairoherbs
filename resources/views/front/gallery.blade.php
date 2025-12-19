@@ -5,26 +5,11 @@
 @endsection
 
 @section('style')
-    <link href="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css">
     <style>
-        .demo-gallery > ul {
-            margin-bottom: 0;
-        }
-
-        .demo-gallery > ul > li {
-            margin-bottom: 50px;
-        }
-
-        .demo-gallery > ul > li a {
-            border: 3px solid #FFF;
-            border-radius: 3px;
-            display: block;
-            overflow: hidden;
-            position: relative;
-            float: left;
-        }
-
-        .demo-gallery > ul > li a > img {
+        .justified-gallery > a > img {
             -webkit-transition: -webkit-transform 0.15s ease 0s;
             -moz-transition: -moz-transform 0.15s ease 0s;
             -o-transition: -o-transform 0.15s ease 0s;
@@ -35,125 +20,9 @@
             width: 100%;
         }
 
-        .demo-gallery > ul > li a:hover > img {
+        .justified-gallery > a:hover > img {
             -webkit-transform: scale3d(1.1, 1.1, 1.1);
             transform: scale3d(1.1, 1.1, 1.1);
-        }
-
-        .demo-gallery > ul > li a:hover .demo-gallery-poster > img {
-            opacity: 1;
-        }
-
-        .demo-gallery > ul > li a .demo-gallery-poster {
-            background-color: rgba(0, 0, 0, 0.1);
-            bottom: 0;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 0;
-            -webkit-transition: background-color 0.15s ease 0s;
-            -o-transition: background-color 0.15s ease 0s;
-            transition: background-color 0.15s ease 0s;
-        }
-
-        .demo-gallery > ul > li a .demo-gallery-poster > img {
-            left: 50%;
-            margin-left: -10px;
-            margin-top: -10px;
-            opacity: 0;
-            position: absolute;
-            top: 50%;
-            -webkit-transition: opacity 0.3s ease 0s;
-            -o-transition: opacity 0.3s ease 0s;
-            transition: opacity 0.3s ease 0s;
-        }
-
-        .demo-gallery > ul > li a:hover .demo-gallery-poster {
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .demo-gallery .justified-gallery > a > img {
-            -webkit-transition: -webkit-transform 0.15s ease 0s;
-            -moz-transition: -moz-transform 0.15s ease 0s;
-            -o-transition: -o-transform 0.15s ease 0s;
-            transition: transform 0.15s ease 0s;
-            -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
-            height: 100%;
-            width: 100%;
-        }
-
-        .demo-gallery .justified-gallery > a:hover > img {
-            -webkit-transform: scale3d(1.1, 1.1, 1.1);
-            transform: scale3d(1.1, 1.1, 1.1);
-        }
-
-        .demo-gallery .justified-gallery > a:hover .demo-gallery-poster > img {
-            opacity: 1;
-        }
-
-        .demo-gallery .justified-gallery > a .demo-gallery-poster {
-            background-color: rgba(0, 0, 0, 0.1);
-            bottom: 0;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 0;
-            -webkit-transition: background-color 0.15s ease 0s;
-            -o-transition: background-color 0.15s ease 0s;
-            transition: background-color 0.15s ease 0s;
-        }
-
-        .demo-gallery .justified-gallery > a .demo-gallery-poster > img {
-            left: 50%;
-            margin-left: -10px;
-            margin-top: -10px;
-            opacity: 0;
-            position: absolute;
-            top: 50%;
-            -webkit-transition: opacity 0.3s ease 0s;
-            -o-transition: opacity 0.3s ease 0s;
-            transition: opacity 0.3s ease 0s;
-        }
-
-        .demo-gallery .justified-gallery > a:hover .demo-gallery-poster {
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .demo-gallery .video .demo-gallery-poster img {
-            height: 48px;
-            margin-left: -24px;
-            margin-top: -24px;
-            opacity: 0.8;
-            width: 48px;
-        }
-
-        .demo-gallery.dark > ul > li a {
-            border: 3px solid #04070a;
-        }
-
-        .heading {
-            text-align: center;
-            padding: 25px 0px 50px;
-        }
-
-        .gallery-item-content {
-            padding: 15px;
-            text-align: center;
-            background: #f9f9f9;
-            border: 1px solid #eee;
-            border-top: none;
-        }
-
-        .gallery-item-content h4 {
-            margin-bottom: 5px;
-            font-size: 18px;
-            color: #333;
-        }
-
-        .gallery-item-content p {
-            font-size: 14px;
-            color: #777;
         }
     </style>
 @endsection
@@ -179,37 +48,35 @@
 
     <div class="container" style="margin-top: 100px; margin-bottom: 100px;">
         @if($galleries->isNotEmpty())
-            <div class="demo-gallery">
-                <ul id="lightgallery" class="list-unstyled row">
-                    @foreach($galleries as $gallery)
-                        <li class="col-lg-3 col-md-3 col-xs-6 col-sm-6"
-                            data-responsive="{{Storage::url($gallery->image)}}"
-                            data-src="{{Storage::url($gallery->image)}}"
-                            data-sub-html="<h4>{{getDefaultValueKey($gallery->title)}}</h4>"
-                            data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
-                            <a href="">
-                                <img class="img-responsive"
-                                     src="{{Storage::url($gallery->image)}}"
-                                     alt="{{getDefaultValueKey($gallery->title)}}">
-                            </a>
-                        </li>
-                    @endforeach
-                </ul>
+            <div id="justified-gallery" class="justified-gallery">
+                @foreach($galleries as $gallery)
+                    <a href="{{Storage::url($gallery->image)}}">
+                        <img src="{{Storage::url($gallery->image)}}"
+                             alt="{{getDefaultValueKey($gallery->title)}}"
+                             class="lazyload">
+                    </a>
+                @endforeach
             </div>
         @endif
     </div>
 @endsection
 
 @section('script')
-    <script src="{{asset('front')}}/js/gallery/lightgallery.js"></script>
-    <script src="{{asset('front')}}/js/gallery/lg-zoom.js"></script>
-    <script src="{{asset('front')}}/js/gallery/lg-thumbnail.js"></script>
-    <script src="{{asset('front')}}/js/gallery/lg-share.js"></script>
-    <script src="{{asset('front')}}/js/gallery/lg-pager.js"></script>
-    <script src="{{asset('front')}}/js/gallery/lg-hash.js"></script>
-    <script src="{{asset('front')}}/js/gallery/lg-fullscreen.js"></script>
-    <script src="{{asset('front')}}/js/gallery/lg-autoplay.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/js/lightgallery-all.min.js"></script>
     <script>
-        lightGallery(document.getElementById('lightgallery'));
+        $(document).ready(function () {
+            $('#justified-gallery').justifiedGallery({
+                rowHeight: 250,
+                margins: 10
+            }).on('jg.complete', function () {
+                $(this).lightGallery({
+                    thumbnail: true,
+                    animateThumb: false,
+                    showThumbByDefault: false
+                });
+            });
+        });
     </script>
 @endsection
