@@ -61,7 +61,7 @@
 <!----- Start Section Loading ----->
 <section class="loading-overlay">
     <div class="loader"></div>
-{{--    <img src="{{asset('front')}}/img/logo.png"/>--}}
+    {{--    <img src="{{asset('front')}}/img/logo.png"/>--}}
 </section>
 <!----- End Section Loading ----->
 
@@ -167,8 +167,10 @@
                 <div class="row align-items-center">
                     <div class="col-lg-2 col-md-3 col-4">
                         <div class="logo">
-                            <a href="{{route('home')}}"><img src="{{Storage::url($website_setting->image)}}"
-                                                             alt="{{getDefaultValueKey($website_setting->title)}}"></a>
+                            <a href="{{route('home')}}">
+                                <img src="{{Storage::url($website_setting->image)}}"
+                                     alt="{{getDefaultValueKey($website_setting->title)}}">
+                            </a>
                         </div>
                     </div>
 
@@ -244,8 +246,10 @@
                 <div class="col-lg-5 col-md-5">
                     <div class="widgets_container widget_app">
                         <div class="footer_logo">
-                            <a href="{{route('home')}}"><img src="{{Storage::url($website_setting->image)}}"
-                                                             alt="{{getDefaultValueKey($website_setting->title)}}"></a>
+                            <a href="{{route('home')}}">
+                                <img src="{{Storage::url($website_setting->image)}}"
+                                     alt="{{getDefaultValueKey($website_setting->title)}}">
+                            </a>
                         </div>
                         <div>
                             <p>{!! isset($website_setting) && $website_setting!=null ? getDefaultValueKey($website_setting->description) : '' !!}</p>
@@ -276,6 +280,7 @@
                                 <li>
                                     <a href="{{route('certifications')}}">{{ __('website.certifications') }}</a>
                                 </li>
+                                <li><a href="{{route('products')}}">{{ __('website.gallery') }}</a></li>
                                 <li><a href="{{route('blog')}}">{{ __('website.blog') }}</a></li>
                                 <li><a href="{{route('contact_us')}}">{{ __('website.contact_us') }}</a></li>
                             </ul>
