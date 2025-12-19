@@ -5,6 +5,7 @@ return [
     'about' => 'عنا',
     'our_products' => 'منتجاتنا',
     'certifications' => 'الشهادات',
+    'gallery' => 'معرض الصور',
     'blog' => 'المدونة',
     'contact_us' => 'اتصل بنا',
     'call_support' => 'الاتصال بالدعم: ',

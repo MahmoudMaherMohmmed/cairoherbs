@@ -7,6 +7,7 @@ use App\Models\Blog;
 use App\Models\Category;
 use App\Models\Certificate;
 use App\Models\Contact;
+use App\Models\Gallery;
 use App\Models\Product;
 use App\Models\Section;
 use App\Models\Service;
@@ -78,6 +79,13 @@ class HomeController extends Controller
         $certifications = Certificate::active()->get();
 
         return view('front.certifications', compact('certifications'));
+    }
+
+    public function gallery()
+    {
+        $galleries = Gallery::active()->get();
+
+        return view('front.gallery', compact('galleries'));
     }
 
     public function contact_us()

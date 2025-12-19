@@ -5,6 +5,7 @@ return [
     'about' => 'About',
     'our_products' => 'Our Products',
     'certifications' => 'Our Certifications',
+    'gallery' => 'Gallery',
     'blog' => 'Blog',
     'contact_us' => 'Contact Us',
     'call_support' => 'Call Support: ',

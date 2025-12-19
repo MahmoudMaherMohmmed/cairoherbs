@@ -11,6 +11,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
     Route::get('blog', [HomeController::class, 'blog'])->name('blog');
     Route::get('blog_details/{slug}', [HomeController::class, 'blog_details'])->name('blog_details');
     Route::get('certifications', [HomeController::class, 'certifications'])->name('certifications');
+    Route::get('gallery', [HomeController::class, 'gallery'])->name('gallery');
     Route::get('contact_us', [HomeController::class, 'contact_us'])->name('contact_us');
     Route::post('contact_post', [HomeController::class, 'contactPost'])->name('contact_post');
 });

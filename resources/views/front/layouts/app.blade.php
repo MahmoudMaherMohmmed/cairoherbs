@@ -126,6 +126,9 @@
                                     href="{{route('certifications')}}">{{ __('website.certifications') }}</a>
                             </li>
                             <li class="menu-item-has-children"><a
+                                    href="{{route('gallery')}}">{{ __('website.gallery') }}</a>
+                            </li>
+                            <li class="menu-item-has-children"><a
                                     href="{{route('blog')}}">{{ __('website.blog') }}</a></li>
                             <li class="menu-item-has-children"><a
                                     href="{{route('contact_us')}}">{{ __('website.contact_us') }}</a></li>
@@ -201,6 +204,9 @@
                                     </li>
                                     <li><a href="{{route('certifications')}}"
                                            class="{{$segment=='certifications' ? 'active' : ''}}">{{ __('website.certifications') }}</a>
+                                    </li>
+                                    <li><a href="{{route('gallery')}}"
+                                           class="{{$segment=='gallery' ? 'active' : ''}}">{{ __('website.gallery') }}</a>
                                     </li>
                                     <li><a href="{{route('blog')}}"
                                            class="{{$segment=='blog'||$segment=='blog_details' ? 'active' : ''}}">{{ __('website.blog') }}</a>
